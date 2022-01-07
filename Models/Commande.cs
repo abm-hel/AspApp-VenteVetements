@@ -12,7 +12,6 @@ namespace AspApp_VenteVetements.Models
         public DateTime date { get; set; }
         public string AdresseLivraison { get; set; }
         public virtual Utilisateur Utilisateur { get; set; }
-
         public virtual ICollection<VetementCommande> VetementCommandes { get; set; }
     }
 }

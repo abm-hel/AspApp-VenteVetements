@@ -10,7 +10,6 @@ namespace AspApp_VenteVetements.Models
         public int id { get; set; }
         public int commandeId { get; set; }
         public int vetementId { get; set; }
-     
         public int quantite { get; set; }
 
         public virtual Commande Commande { get; set; }

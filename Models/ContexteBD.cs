@@ -9,6 +9,7 @@ namespace AspApp_VenteVetements.Models
 {
     public class ContexteBD : DbContext
     {
+        public virtual DbSet<Statut> Statuts { get; set; }
         public virtual DbSet<Utilisateur> Utilisateurs { get; set; }
         public virtual DbSet<Commande> Commandes { get; set; }
         public virtual DbSet<Vetement> Vetements { get; set; }
@@ -16,6 +17,15 @@ namespace AspApp_VenteVetements.Models
 
         protected override void OnModelCreating(DbModelBuilder createurModeles)
         {
+            createurModeles.Entity<Statut>()
+            .HasKey(u => u.id)
+            .Property(u => u.id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
+            createurModeles.Entity<Statut>()
+                .HasMany(s => s.Utilisateurs)
+                .WithRequired(u => u.Statut)
+                .HasForeignKey(u => u.statutId);
+
             createurModeles.Entity<Utilisateur>()
                 .HasKey(u => u.id)
                 .Property(u => u.id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
