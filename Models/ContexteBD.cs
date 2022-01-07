@@ -44,7 +44,6 @@ namespace AspApp_VenteVetements.Models
              .WithRequired(vc => vc.Vetement)
              .HasForeignKey(vc => vc.vetementId);
 
-
             createurModeles.Entity<VetementCommande>()
                 .HasKey(vc => vc.id)
                 .Property(vc => vc.id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
