@@ -18,8 +18,8 @@ namespace AspApp_VenteVetements.Models
         protected override void OnModelCreating(DbModelBuilder createurModeles)
         {
             createurModeles.Entity<Statut>()
-            .HasKey(u => u.id)
-            .Property(u => u.id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            .HasKey(s => s.id)
+            .Property(s => s.id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             createurModeles.Entity<Statut>()
                 .HasMany(s => s.Utilisateurs)
