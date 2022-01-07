@@ -1,0 +1,48 @@
+﻿@model AspApp_VenteVetements.Models.VetementCommande
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VetementCommande</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Commande.AdresseLivraison)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Commande.AdresseLivraison)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantite)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

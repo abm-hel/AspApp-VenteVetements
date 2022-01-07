@@ -1,0 +1,50 @@
+﻿@model AspApp_VenteVetements.Models.Utilisateur
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Utilisateur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Statut.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Statut.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adresseMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adresseMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motDePasse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motDePasse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
