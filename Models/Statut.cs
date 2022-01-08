@@ -9,6 +9,7 @@ namespace AspApp_VenteVetements.Models
     {
         public int id { get; set; }
         public string nom { get; set; }
-        
+
+        public virtual ICollection<Utilisateur> Utilisateurs { get; set; }
     }
 }

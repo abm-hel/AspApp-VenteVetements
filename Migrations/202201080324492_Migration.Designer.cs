@@ -13,7 +13,7 @@ namespace AspApp_VenteVetements.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202201072340387_Migration"; }
+            get { return "202201080324492_Migration"; }
         }
         
         string IMigrationMetadata.Source

@@ -1,0 +1,43 @@
+﻿@model AspApp_VenteVetements.Models.VetementCommande
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VetementCommande</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Commande.AdresseLivraison)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Commande.AdresseLivraison)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantite)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
