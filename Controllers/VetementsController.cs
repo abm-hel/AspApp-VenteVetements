@@ -16,6 +16,7 @@ namespace AspApp_VenteVetements.Controllers
         private ContexteBD db = new ContexteBD();
 
         // GET: Vetements
+        [Authorize(Roles = "1")]
         public ActionResult Index()
         {
             return View(db.Vetements.ToList());

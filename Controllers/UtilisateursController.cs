@@ -10,12 +10,13 @@ using AspApp_VenteVetements.Models;
 
 namespace AspApp_VenteVetements.Controllers
 {
-    [Authorize]
+    
     public class UtilisateursController : Controller
     {
         private ContexteBD db = new ContexteBD();
 
         // GET: Utilisateurs
+        [Authorize(Roles = "1")]
         public ActionResult Index()
         {
             var utilisateurs = db.Utilisateurs.Include(u => u.Statut);

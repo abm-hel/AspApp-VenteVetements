@@ -142,6 +142,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Commande.cs" />
     <Compile Include="Models\ContexteBD.cs" />
+    <Compile Include="Models\GenerateurStatuts.cs" />
     <Compile Include="Models\Statut.cs" />
     <Compile Include="Models\Utilisateur.cs" />
     <Compile Include="Models\Vetement.cs" />

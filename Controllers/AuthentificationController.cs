@@ -25,7 +25,7 @@ namespace AspApp_VenteVetements.Controllers
             if(utilisateurExistant !=0)
             {
                 FormsAuthentication.SetAuthCookie(utilisateur.adresseMail, false);
-                return RedirectToAction("Index", "Vetements");
+                return RedirectToAction("Index", "Home");
             }
 
             else

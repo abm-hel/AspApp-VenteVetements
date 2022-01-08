@@ -10,12 +10,13 @@ using AspApp_VenteVetements.Models;
 
 namespace AspApp_VenteVetements.Controllers
 {
-    [Authorize]
+    
     public class VetementCommandesController : Controller
     {
         private ContexteBD db = new ContexteBD();
 
         // GET: VetementCommandes
+        [Authorize(Roles = "1")]
         public ActionResult Index()
         {
             var vetementCommandes = db.VetementCommandes.Include(v => v.Commande).Include(v => v.Vetement);
