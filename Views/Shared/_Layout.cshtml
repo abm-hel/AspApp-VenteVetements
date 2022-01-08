@@ -25,13 +25,14 @@
 
                     @if (User.Identity.IsAuthenticated == true)
                     {
-                        if(User.IsInRole("1"))
+                        if (User.IsInRole("1"))
                         {
                             <li>@Html.ActionLink("Commandes", "Index", "Commandes")</li>
                             <li>@Html.ActionLink("Vêtements Vendus", "Index", "VetementCommandes")</li>
                             <li>@Html.ActionLink("Vêtements", "Index", "Vetements")</li>
                             <li>@Html.ActionLink("Utilisateurs", "Index", "Utilisateurs")</li>
                             <li>@Html.ActionLink("Statuts", "Index", "Statuts")</li>
+
                         }
                         <li>@Html.ActionLink("Se déconnecter", "Deconnexion", "Authentification")</li>
                     }
@@ -39,6 +40,7 @@
                     else
                     {
                         <li>@Html.ActionLink("Se connecter", "Connexion", "Authentification")</li>
+                        <li>@Html.ActionLink("S'inscrire", "InscrireUtilisateur", "Inscription")</li>
                     }
                 </ul>
             </div>

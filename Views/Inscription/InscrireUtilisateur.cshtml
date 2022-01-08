@@ -1,0 +1,69 @@
+﻿@model AspApp_VenteVetements.Models.Utilisateur
+
+@{
+    ViewBag.Title = "S'inscrire";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Inscrivez-vous</h2>
+
+
+@using (Html.BeginForm("InscrireUtilisateur","Inscription",FormMethod.Post)) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.statutId, "statutId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("statutId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.statutId, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.nom, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.nom, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.nom, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.adresseMail, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.adresseMail, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.adresseMail, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.motDePasse, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.motDePasse, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.motDePasse, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="S'inscrire" class="btn btn-default" />
+        </div>
+    </div>
+
+    <br />
+    <h4 style="color:forestgreen;">@ViewBag.InscriptionAvecSuccesMessage</h4>
+    <h4 style="color:darkred;">@ViewBag.UtilisateurExisteDejaMessage</h4>
+
+</div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

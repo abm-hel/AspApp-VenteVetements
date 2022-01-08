@@ -15,7 +15,7 @@ namespace AspApp_VenteVetements.Controllers
     {
         private ContexteBD db = new ContexteBD();
 
-        // GET: Utilisateurs
+        // GET: Utilisateurs    
         [Authorize(Roles = "1")]
         public ActionResult Index()
         {
@@ -62,6 +62,8 @@ namespace AspApp_VenteVetements.Controllers
             ViewBag.statutId = new SelectList(db.Statuts, "id", "nom", utilisateur.statutId);
             return View(utilisateur);
         }
+
+       
 
         // GET: Utilisateurs/Edit/5
         public ActionResult Edit(int? id)
