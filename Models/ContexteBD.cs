@@ -20,21 +20,11 @@ namespace AspApp_VenteVetements.Models
             createurModeles.Entity<Statut>()
             .HasKey(s => s.id)
             .Property(s => s.id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
-            createurModeles.Entity<Statut>()
-                .HasMany(s => s.Utilisateurs)
-                .WithRequired(u => u.Statut)
-                .HasForeignKey(u => u.statutId);
+           
 
             createurModeles.Entity<Utilisateur>()
                 .HasKey(u => u.id)
                 .Property(u => u.id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
-            createurModeles.Entity<Utilisateur>()
-                .HasMany(u => u.Commandes)
-                .WithRequired(c => c.Utilisateur)
-                .HasForeignKey(c => c.utilisateurId);
-
 
             createurModeles.Entity<Commande>()
                 .HasKey(c => c.id)

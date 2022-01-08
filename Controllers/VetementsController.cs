@@ -10,6 +10,7 @@ using AspApp_VenteVetements.Models;
 
 namespace AspApp_VenteVetements.Controllers
 {
+    [Authorize]
     public class VetementsController : Controller
     {
         private ContexteBD db = new ContexteBD();

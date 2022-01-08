@@ -9,11 +9,11 @@ namespace AspApp_VenteVetements.Models
     {
         public int id { get; set; }
         public string nom { get; set; }
-        public int statutId { get; set; }
+    
         public string adresseMail { get; set; }
         public string motDePasse { get; set; }
         
-        public virtual Statut Statut { get; set; }
-        public virtual ICollection<Commande> Commandes { get; set; }
+      
+        
     }
 }

@@ -126,18 +126,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CommandesController.cs" />
+    <Compile Include="Controllers\AuthentificationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\StatutsController.cs" />
-    <Compile Include="Controllers\UtilisateursController.cs" />
-    <Compile Include="Controllers\VetementCommandesController.cs" />
     <Compile Include="Controllers\VetementsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202201071707035_Migration.cs" />
-    <Compile Include="Migrations\202201071707035_Migration.Designer.cs">
-      <DependentUpon>202201071707035_Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202201072340387_Migration.cs" />
+    <Compile Include="Migrations\202201072340387_Migration.Designer.cs">
+      <DependentUpon>202201072340387_Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Commande.cs" />
@@ -184,31 +181,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Statuts\Create.cshtml" />
-    <Content Include="Views\Statuts\Delete.cshtml" />
-    <Content Include="Views\Statuts\Details.cshtml" />
-    <Content Include="Views\Statuts\Edit.cshtml" />
-    <Content Include="Views\Statuts\Index.cshtml" />
-    <Content Include="Views\Utilisateurs\Create.cshtml" />
-    <Content Include="Views\Utilisateurs\Delete.cshtml" />
-    <Content Include="Views\Utilisateurs\Details.cshtml" />
-    <Content Include="Views\Utilisateurs\Edit.cshtml" />
-    <Content Include="Views\Utilisateurs\Index.cshtml" />
-    <Content Include="Views\Commandes\Create.cshtml" />
-    <Content Include="Views\Commandes\Delete.cshtml" />
-    <Content Include="Views\Commandes\Details.cshtml" />
-    <Content Include="Views\Commandes\Edit.cshtml" />
-    <Content Include="Views\Commandes\Index.cshtml" />
     <Content Include="Views\Vetements\Create.cshtml" />
     <Content Include="Views\Vetements\Delete.cshtml" />
     <Content Include="Views\Vetements\Details.cshtml" />
     <Content Include="Views\Vetements\Edit.cshtml" />
     <Content Include="Views\Vetements\Index.cshtml" />
-    <Content Include="Views\VetementCommandes\Create.cshtml" />
-    <Content Include="Views\VetementCommandes\Delete.cshtml" />
-    <Content Include="Views\VetementCommandes\Details.cshtml" />
-    <Content Include="Views\VetementCommandes\Edit.cshtml" />
-    <Content Include="Views\VetementCommandes\Index.cshtml" />
+    <Content Include="Views\Authentification\Connexion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -227,8 +205,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202201071707035_Migration.resx">
-      <DependentUpon>202201071707035_Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202201072340387_Migration.resx">
+      <DependentUpon>202201072340387_Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
