@@ -130,6 +130,7 @@
     <Compile Include="Controllers\CommandesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InscriptionController.cs" />
+    <Compile Include="Controllers\StatutsController.cs" />
     <Compile Include="Controllers\UtilisateursController.cs" />
     <Compile Include="Controllers\VetementCommandesController.cs" />
     <Compile Include="Controllers\VetementsController.cs" />
@@ -208,6 +209,11 @@
     <Content Include="Views\Utilisateurs\Edit.cshtml" />
     <Content Include="Views\Utilisateurs\Index.cshtml" />
     <Content Include="Views\Inscription\InscrireUtilisateur.cshtml" />
+    <Content Include="Views\Statuts\Create.cshtml" />
+    <Content Include="Views\Statuts\Delete.cshtml" />
+    <Content Include="Views\Statuts\Details.cshtml" />
+    <Content Include="Views\Statuts\Edit.cshtml" />
+    <Content Include="Views\Statuts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
