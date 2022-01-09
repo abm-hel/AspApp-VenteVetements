@@ -1,0 +1,35 @@
+﻿@model AspApp_VenteVetements.ViewModels.CommandeViewModel
+@{
+    ViewBag.Title = "AfficherCommandes";
+}
+<h2>@ViewBag.messageBienvenue !</h2>
+<br />
+<h4>Voici la liste de vos commandes</h4>
+<br />
+        <ul>
+            @foreach (var commande in Model.Commandes)
+            {
+            <li style="font-weight: bold;list-style-type: none; ">
+                Commande @commande.id effetuée le @commande.date.ToShortDateString() et sera livrée à cette adresse : @commande.AdresseLivraison
+
+               
+                <ul>
+                    @foreach (var vetementsAchetes in Model.Vetements)
+                    {
+                        if (commande.id == vetementsAchetes.Commande)
+                        {
+                            <li style="list-style-type: none; font-weight:normal; margin:25px;">@vetementsAchetes.InfosVetements.marque @vetementsAchetes.InfosVetements.nom @vetementsAchetes.InfosVetements.taille  : @vetementsAchetes.InfosVetements.prix €  X  @vetementsAchetes.Quantite</li>
+                        }
+                    }
+                </ul>
+                <br />
+                <br />
+            </li>
+
+            }
+        </ul>
+         @if(Model.Commandes.Count ==0)
+         { 
+            <p style="color:darkred;">Aucune commande trouvée</p>
+         }
+

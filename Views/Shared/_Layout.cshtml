@@ -32,7 +32,11 @@
                             <li>@Html.ActionLink("Vêtements", "Index", "Vetements")</li>
                             <li>@Html.ActionLink("Utilisateurs", "Index", "Utilisateurs")</li>
                             <li>@Html.ActionLink("Statuts", "Index", "Statuts")</li>
-
+                            
+                        }
+                        else if (User.IsInRole("2"))
+                        {
+                            <li>@Html.ActionLink("Mes commandes", "AfficherCommandes", "Home")</li>
                         }
                         <li>@Html.ActionLink("Se déconnecter", "Deconnexion", "Authentification")</li>
                     }
