@@ -77,7 +77,7 @@ namespace AspApp_VenteVetements.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.commandeId = new SelectList(db.Commandes, "id", "AdresseLivraison", vetementCommande.commandeId);
+            ViewBag.commandeId = new SelectList(db.Commandes, "id", "id", vetementCommande.commandeId);
             ViewBag.vetementId = new SelectList(db.Vetements, "id", "nom", vetementCommande.vetementId);
             return View(vetementCommande);
         }
@@ -95,7 +95,7 @@ namespace AspApp_VenteVetements.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.commandeId = new SelectList(db.Commandes, "id", "AdresseLivraison", vetementCommande.commandeId);
+            ViewBag.commandeId = new SelectList(db.Commandes, "id", "id", vetementCommande.commandeId);
             ViewBag.vetementId = new SelectList(db.Vetements, "id", "nom", vetementCommande.vetementId);
             return View(vetementCommande);
         }
