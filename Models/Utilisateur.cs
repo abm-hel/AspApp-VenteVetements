@@ -12,16 +12,17 @@ namespace AspApp_VenteVetements.Models
         public int id { get; set; }
         public int statutId { get; set; }
 
-        [DisplayName("Nom complet")]
-        
+        [Required]
+        //[DisplayName("Nom complet")]
         public string nom { get; set; }
 
-        [DisplayName("Adresse Email")]
-        [DataType(DataType.EmailAddress)]
+        [Required]
+        //[DisplayName("Adresse Email")]
         public string adresseMail { get; set; }
-
-        [DisplayName("Mot de passe")]
-        [DataType(DataType.Password)]
+        
+        [Required]
+        //[DisplayName("Mot de passe")]
+        //[DataType(DataType.Password)]
         public string motDePasse { get; set; }
 
         public virtual ICollection<Commande> Commandes { get; set; }

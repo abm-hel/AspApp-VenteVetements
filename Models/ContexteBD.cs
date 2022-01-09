@@ -36,6 +36,21 @@ namespace AspApp_VenteVetements.Models
             .WithRequired(c => c.Utilisateur)
             .HasForeignKey(c => c.utilisateurId);
 
+            createurModeles.Entity<Utilisateur>()
+                .Property(u => u.nom)
+                .IsRequired()
+                .HasMaxLength(150);
+
+            createurModeles.Entity<Utilisateur>()
+              .Property(u => u.motDePasse)
+              .IsRequired()
+              .HasMaxLength(150);
+
+            createurModeles.Entity<Utilisateur>()
+              .Property(u => u.adresseMail)
+              .IsRequired()
+              .HasMaxLength(100);
+
             createurModeles.Entity<Commande>()
                 .HasKey(c => c.id)
                 .Property(c => c.id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
