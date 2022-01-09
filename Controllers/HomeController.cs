@@ -40,7 +40,7 @@ namespace AspApp_VenteVetements.Controllers
                                                   where utilisateur.adresseMail == User.Identity.Name
                                                   select utilisateur.nom).SingleOrDefault();
 
-                    ViewBag.messageBienvenue = "Bonjour monsieur" + " " + nomUtilisateur;
+                    ViewBag.messageBienvenue = "Bonjour " + nomUtilisateur;
 
                     var mesCommandes = (from lesCommandes in baseDonnees.Commandes
                                      where lesCommandes.utilisateurId == identifiantUtilisateur
