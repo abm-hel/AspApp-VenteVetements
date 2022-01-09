@@ -52,13 +52,18 @@ namespace AspApp_VenteVetements.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,utilisateurId,date,AdresseLivraison")] Commande commande)
         {
-            if (ModelState.IsValid)
+            if (string.IsNullOrEmpty(commande.AdresseLivraison))
+            {
+                ModelState.AddModelError("AdresseLivraison", "Veuillez entrer une adresse");
+            }
+
+            else if(ModelState.IsValid)
             {
                 db.Commandes.Add(commande);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            
             ViewBag.utilisateurId = new SelectList(db.Utilisateurs, "id", "nom", commande.utilisateurId);
             return View(commande);
         }
@@ -86,7 +91,12 @@ namespace AspApp_VenteVetements.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,utilisateurId,date,AdresseLivraison")] Commande commande)
         {
-            if (ModelState.IsValid)
+            if (string.IsNullOrEmpty(commande.AdresseLivraison))
+            {
+                ModelState.AddModelError("AdresseLivraison", "Veuillez entrer une adresse");
+            }
+
+            else if (ModelState.IsValid)
             {
                 db.Entry(commande).State = EntityState.Modified;
                 db.SaveChanges();
