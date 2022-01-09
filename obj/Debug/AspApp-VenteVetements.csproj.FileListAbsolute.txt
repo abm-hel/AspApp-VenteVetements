@@ -87,6 +87,3 @@ C:\Users\adilb\Desktop\ProjetASP\AspApp-VenteVetements\obj\Debug\AspApp-VenteVet
 C:\Users\adilb\Desktop\ProjetASP\AspApp-VenteVetements\obj\Debug\AspApp-VenteVetements.csproj.CopyComplete
 C:\Users\adilb\Desktop\ProjetASP\AspApp-VenteVetements\obj\Debug\AspApp-VenteVetements.dll
 C:\Users\adilb\Desktop\ProjetASP\AspApp-VenteVetements\obj\Debug\AspApp-VenteVetements.pdb
-C:\Users\adilb\Desktop\ProjetASP\AspApp-VenteVetements\obj\Debug\AspApp_VenteVetements.Migrations.Migration.resources
-C:\Users\adilb\Desktop\ProjetASP\AspApp-VenteVetements\obj\Debug\AspApp-VenteVetements.csproj.GenerateResource.cache
-C:\Users\adilb\Desktop\ProjetASP\AspApp-VenteVetements\obj\Debug\AspApp-VenteVetements.csproj.AssemblyReference.cache
