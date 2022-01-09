@@ -23,7 +23,7 @@ namespace AspApp_VenteVetements.Controllers
             {
                 if(baseDonnes.Utilisateurs.Any(x => x.adresseMail == utilisateur.adresseMail))
                 {
-                    ViewBag.UtilisateurExisteDejaMessage = "Cette Adresse Email existe déjà ";
+                    ViewBag.UtilisateurExisteDejaMessage = "Cet utilisateur existe déjà ";
                     return View("InscrireUtilisateur", utilisateur);
                 }
 
