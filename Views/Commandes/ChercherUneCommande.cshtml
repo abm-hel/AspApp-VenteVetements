@@ -1,0 +1,21 @@
+﻿@model AspApp_VenteVetements.Models.Commande
+@{
+    ViewBag.Title = "ChercherUneCommande";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+
+
+
+@if (Model !=null)
+{
+    <p style="font-weight: bold;">La commande @Model.id va être livrée à l'adresse suivante : @Model.AdresseLivraison à cette date : @Model.date.ToShortDateString() .</p>
+}
+
+else
+{
+    <p  style="color : darkred; font-weight:bold;">Cette commande n'existe pas.</p>
+}
+

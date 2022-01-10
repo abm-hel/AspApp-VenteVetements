@@ -23,6 +23,15 @@ namespace AspApp_VenteVetements.Controllers
             return View(commandes.ToList());
         }
 
+        public ActionResult ChercherUneCommande(int id)
+        {
+            ContexteBD baseDonnees = new ContexteBD();
+            var maCommande = (from lesCommandes in baseDonnees.Commandes
+                                where lesCommandes.id == id
+                                select lesCommandes).FirstOrDefault();
+            return View(maCommande);
+        }
+
         // GET: Commandes/Details/5
         public ActionResult Details(int? id)
         {

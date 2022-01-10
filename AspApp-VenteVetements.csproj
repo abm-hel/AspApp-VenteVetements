@@ -215,6 +215,7 @@
     <Content Include="Views\Statuts\Details.cshtml" />
     <Content Include="Views\Statuts\Edit.cshtml" />
     <Content Include="Views\Statuts\Index.cshtml" />
+    <Content Include="Views\Commandes\ChercherUneCommande.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

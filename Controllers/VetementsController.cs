@@ -19,6 +19,11 @@ namespace AspApp_VenteVetements.Controllers
         [Authorize(Roles = "1")]
         public ActionResult Index(string option, string search)
         {
+            if (search == "" & (option == "taille" || option == "couleur" || option == "marque"))
+            {
+                return View(db.Vetements.ToList());
+            }
+
             if (option == "marque")
             {
                 return View(db.Vetements.Where(x=> x.marque == search || search == null).ToList());
@@ -31,12 +36,11 @@ namespace AspApp_VenteVetements.Controllers
 
             else if (option == "taille")
             {
+                if(db.Vetements.Where(x => x.taille == search || search == null).ToList() == null)
+                {
+                    ViewBag.messageNonTrouve = "Aucun vêtement trouvé";
+                }
                 return View(db.Vetements.Where(x => x.taille == search || search == null).ToList());
-            }
-
-            else if (search == "taille" & (option == "taille" || option == "couleur" || option == "marque"))
-            {
-                return View();
             }
 
             else
@@ -46,13 +50,8 @@ namespace AspApp_VenteVetements.Controllers
 
         }
 
-        public ActionResult Rafraichir()
-        {
-            return View();
-        }
-
             // GET: Vetements/Details/5
-            public ActionResult Details(int? id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {

@@ -18,6 +18,12 @@ namespace AspApp_VenteVetements
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "chercherCommande",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Commandes", action = "ChercherUneCommande", id = UrlParameter.Optional }
+            );
         }
     }
 }
