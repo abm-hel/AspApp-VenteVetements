@@ -17,13 +17,42 @@ namespace AspApp_VenteVetements.Controllers
 
         // GET: Vetements
         [Authorize(Roles = "1")]
-        public ActionResult Index()
+        public ActionResult Index(string option, string search)
         {
-            return View(db.Vetements.ToList());
+            if (option == "marque")
+            {
+                return View(db.Vetements.Where(x=> x.marque == search || search == null).ToList());
+            }
+
+            else if (option == "couleur")
+            {
+                return View(db.Vetements.Where(x => x.couleur == search || search == null).ToList());
+            }
+
+            else if (option == "taille")
+            {
+                return View(db.Vetements.Where(x => x.taille == search || search == null).ToList());
+            }
+
+            else if (search == "taille" & (option == "taille" || option == "couleur" || option == "marque"))
+            {
+                return View();
+            }
+
+            else
+            {
+                return View(db.Vetements.Where(x => x.nom.StartsWith(search) || search == null).ToList());
+            }
+
         }
 
-        // GET: Vetements/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Rafraichir()
+        {
+            return View();
+        }
+
+            // GET: Vetements/Details/5
+            public ActionResult Details(int? id)
         {
             if (id == null)
             {
