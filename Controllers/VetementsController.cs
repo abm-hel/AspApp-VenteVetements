@@ -36,11 +36,13 @@ namespace AspApp_VenteVetements.Controllers
 
             else if (option == "taille")
             {
-                if(db.Vetements.Where(x => x.taille == search || search == null).ToList() == null)
+                if (db.Vetements.Where(x => x.taille == search || search == null).ToList() == null)
                 {
                     ViewBag.messageNonTrouve = "Aucun vêtement trouvé";
                 }
+
                 return View(db.Vetements.Where(x => x.taille == search || search == null).ToList());
+
             }
 
             else
